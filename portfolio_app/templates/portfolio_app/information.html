@@ -1,0 +1,136 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+{% load static %}
+    <!-- Main -->
+    <div id="ckarla-main">
+    <!-- Banner -->
+    <div class="ready banner-padding bg-img" data-overlay-light="0" data-background="{% static 'images/1920x1080-no.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cat text-center animate-box fadeInUp animated" data-animate-effect="fadeInUp"> <span>Информация</span>
+                        <hr class="line line-hr-center">
+                        <h1>Прайс-лист</h1> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Prices & Packages -->
+    <div class="section-padding prices">
+        <div class="container">
+            <div class="row mb-60">
+                <div class="col-md-4">
+                    <h2>Доступные цены и полные пакеты услуг</h2>
+                    <hr class="line line-hr-left"> </div>
+                <div class="col-md-8">
+                    <p>Ищете опытного фотографа для съемок в любых уголках мира по доступным ценам? Вы меня нашли! Мои тарифы и пакеты услуг разработаны так, чтобы подойти каждому.</p>
+                    <p>Жизнь наполнена движением и переменами. Иногда возникают сложности, но именно они делают нас сильнее. Важно сохранять уверенность и стремиться к своим целям, несмотря на преграды. Гармония достигается через баланс и внутреннюю силу. Будьте открыты новым возможностям и не бойтесь идти вперед.</p>
+                </div>
+            </div>
+            <div class="row mb-60">
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="prices-img"> <img src="{% static 'images/price_1.jpg' %}" alt="">
+                            <div class="cat">
+                                <a href="{% url 'contact' %}"> <span>Стоимость: {{ price_1.price_service }}</span></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <a href="{% url 'contact' %}"><h5>{{ price_1.name_service }} </h5></a>
+                            <hr class="line line-hr-left">
+                            <ul>
+                                <li><i class="ti-check"></i> 5 - часовая</li>
+                                <li><i class="ti-check"></i> 50 фото с постобработкой</li>
+                                <li><i class="ti-check"></i> + в подарок короткий видеоролик (Reels)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="prices-img"> <img src="{% static 'images/price_3.jpg' %}" alt="">
+                            <div class="cat">
+                                <a href="{% url 'contact' %}"> <span>Стоимость: {{ price_2.price_service }}</span></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <a href="{% url 'contact' %}"><h5>{{ price_2.name_service }} </h5></a>
+                            <hr class="line line-hr-left">
+                            <ul>
+                                <li><i class="ti-check"></i> 5 - часовая</li>
+                                <li><i class="ti-check"></i> 50 фотографий с постобработкой</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="prices-img"> <img src="{% static 'images/price_4.jpg' %}" alt="">
+                            <div class="cat">
+                                <a href="{% url 'contact' %}"> <span>Стоимость: {{ price_3.price_service }}</span></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <a href="{% url 'contact' %}"><h5>{{ price_3.name_service }} </h5></a>
+                            <hr class="line line-hr-left">
+                            <ul>
+                                <li><i class="ti-check"></i> 10 - часовая</li>
+                                <li><i class="ti-check"></i> 50 фотографий</li>
+                                <li><i class="ti-check"></i> Reels</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="prices-img"> <img src="{% static 'images/price_5.jpg' %}" alt="">
+                            <div class="cat">
+                                <a href="{% url 'contact' %}"> <span>Стоимость: {{ price_4.price_service }}</span></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <a href="{% url 'contact' %}"><h5>{{ price_4.name_service }} </h5></a>
+                            <hr class="line line-hr-left">
+                            <ul>
+                                <li><i class="ti-check"></i> Планирование перед съемками</li>
+                                <li><i class="ti-check"></i> 5 - часовая фотосессия</li>
+                                <li><i class="ti-check"></i> 50 фото с постобработкой</li>
+                                <li><i class="ti-check"></i> JPG высокого качества</li>
+                                <li><i class="ti-check"></i> + в подарок короткий видеоролик (Reels)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="prices-img"> <img src="{% static 'images/price_2.jpg' %}" alt="">
+                            <div class="cat">
+                                <a href="{% url 'contact' %}"> <span>Стоимость: {{ price_5.price_service }}</span></a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <a href="{% url 'contact' %}"><h5>{{ price_5.name_service }} </h5></a>
+                            <hr class="line line-hr-left">
+                            <ul>
+                                <li><i class="ti-check"></i> Планирование перед съемками</li>
+                                <li><i class="ti-check"></i> 50 фото с постобработкой</li>
+                                <li><i class="ti-check"></i> JPG высокого качества </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <h2>Дополнительные услуги</h2>
+                </div>
+                <div class="col-md-7 offset-md-1">
+                    <div class="exstra-services">
+                        <h5>{{ price_6.name_service }} <span class="price">{{ price_6.price_service }}</span></h5>
+                        <h5>{{ price_7.name_service }} <span class="price">{{ price_7.price_service }}</span></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

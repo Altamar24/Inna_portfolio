@@ -1,0 +1,120 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+{% load static %}
+
+
+    <!-- Main -->
+    <div id="ckarla-main">
+    <!-- Slider -->
+    <div class="karla-homepage-slider">
+
+                    <div class="karla-slider">
+                        <div class="karla-slider-item"> <img class="karla-slider-img" src="{% static 'images/glavnaya_1.jpeg.jpg' %}" alt=""> </div>
+                        <div class="karla-slider-item"> <img class="karla-slider-img" src="{% static 'images/glavnaya_2.jpeg.jpg' %}" alt=""> </div>
+                        <div class="karla-slider-item"> <img class="karla-slider-img" src="{% static 'images/glavnaya_3.jpeg.jpg' %}" alt=""> </div>
+                        <div class="karla-slider-item"> <img class="karla-slider-img" src="{% static 'images/glavnaya_4.jpeg.jpg' %}" alt=""> </div>
+                        <div class="karla-slider-item"> <img class="karla-slider-img" src="{% static 'images/glavnaya_5.jpeg.jpg' %}" alt=""> </div>
+                        <div class="karla-slider-item"> <img class="karla-slider-img" src="{% static 'images/glavnaya_6.jpeg.jpg' %}" alt=""> </div>
+                    </div>
+         
+   
+    </div>
+    <!-- About Me -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"> <span>Привет всем!</span>
+                    <h2>Я Инна.</h2>
+                    <h2></h2>
+                    <hr class="line line-hr-left">
+                    <p>Профессиональный фотограф, 
+                        готовый запечатлеть самые важные 
+                        моменты вашей жизни.
+                        Что вы получите выбирая меня ?
+                        Качество наивысшего уровня. 
+                        Разнообразие услуг.
+                        Принимаю заказы на следующие 
+                        виды фотосъемок:
+                        Индивидуальная фотосессия.
+                        Предсвадебная фотосессия 
+                        Проводы невесты 
+                        Свадьбы (со стороны жениха)
+                        Reels ( красивые видеоролики) вашего мероприятия</p>
+                    <p class="signature">Inna S.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="karla-about-img">
+                        <div class="img mb-30"> <img src="{% static 'images/Inna.jpg' %}" alt=""> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Recent Weddings -->
+    <div class="section-padding recent-weddings bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mb-30">
+                    <span class="heading-meta">Портфолио</span>
+                    <h2 class="pwe-heading">Недавние работы</h2>
+                    <hr class="line line-hr-center">
+                </div>
+            </div>
+            <div class="row">
+                {% for photo in photos %}
+                <div class="col-md-4">
+                    <div class="item">
+                        <div class="recent-weddings-img"> <img src="{{ photo.image.url }}" alt="{{ photo.name }}"> </div>
+                        <div class="content">
+                            <h5>{{ photo.name_service }}<br>{{ photo.description }}</h5>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- Testiominals -->
+    <div class="section-padding testimonials bg-img bg-fixed" data-overlay-light="1" data-background="{% static 'images/1920x1080-no.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="owl-carousel owl-theme col-md-8 offset-md-2 mb-30">
+                    <div class="item-box"> <span class="quote">
+                            <img src="{% static 'images/quot.png' %}" alt="">
+                        </span>
+                        <h3>" Двадцать пятого приглашала ее на свадьбу брата, ставлю ей 10 из 10. Умничка! Я уже готова была заплатить ей чтобы она от нас отстала, настолько она качественно делает свою работу... ни один момент не упустит! За весь день даже поесть не присела. "</h3>
+                        <hr class="line line-hr-left">
+                        <div class="info">
+                            <h6>Фатима</h6>
+                            <h6>Свадьба, целый съемочный</h6>
+                        </div>
+                    </div>
+                    <div class="item-box"> <span class="quote">
+                            <img src="{% static 'images/quot.png' %}" alt="">
+                        </span>
+                        <h3>" Инна, очень красиво. Я все еще любуюсь и любуюсь. "</h3>
+                        <hr class="line line-hr-left">
+                        <div class="info">
+                            <h6>Иман</h6>
+                            <h6>Свадьба, целый съемочный</h6>
+                        </div>
+                    </div>
+                    <div class="item-box"> <span class="quote">
+                            <img src="{% static 'images/quot.png' %}" alt="">
+                        </span>
+                        <h3>" Ма Ша Аллах, очень красиво ! "</h3>
+                        <hr class="line line-hr-left">
+                        <div class="info">
+                            <h6>Марьям</h6>
+                            <h6>Свадьба, целый съемочный</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

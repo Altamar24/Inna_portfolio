@@ -1,0 +1,102 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+{% load static %}
+{% load widget_tweaks %}
+
+    <!-- Main -->
+    <div id="ckarla-main">
+    <!-- Banner -->
+    <div class="ready banner-padding bg-img" data-overlay-light="0" data-background="{% static 'images/1920x1080-no.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cat text-center animate-box fadeInUp animated" data-animate-effect="fadeInUp">
+                        <span>Контакты</span>
+                        <hr class="line line-hr-center">
+                        <h1>Свяжитесь со мной</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Info -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 mb-30">
+                    <span>Свяжитесь со мной</span>
+                    <h2>Ваши счастливые моменты -</h2>
+                    <h2>в моих кадрах</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-2"> <span class="line-one"></span> </div>
+                        <div class="col-md-4 mb-30">
+                            <p>Готова запечатлеть важные моменты вашей жизни и с радостью жду вашего сообщения!</p>
+                            <p>Пожалуйста, заполните форму ниже или напишите напрямую, указав как можно больше деталей, на адрес {{ contacts.mail }}</p>
+                        </div>
+                        <div class="col-md-5 offset-md-1">
+                            <p><b>Телефон :</b> {{ contacts.phone_number }}</p>
+                            <p><b>Mail :</b> {{ contacts.mail }}</p>
+                            <p><b>Адрес :</b> {{ contacts.address }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Form -->
+    <div class="ready banner-full-padding bg-img valign" data-background="{% static 'images/1920x1080.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8 offset-md-2 bg-white">
+                            <div class="contact-form">
+                                <h6>Свяжитесь со мной</h6>
+                                <hr class="line line-hr-center"><br>
+                                <p>Готова ответить на все вопросы. Отправьте запрос через форму — вышлю даты и варианты съёмки. </p>
+                                {% if success %}
+                                <div class="alert alert-success" role="alert">
+                                    Ваше сообщение было успешно отправлено.
+                                </div>
+                                {% endif %}
+                                <form method="post" class="contact__form" action="">
+                                    {% csrf_token %}
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            {{ form.name.errors }}
+                                            {{ form.name|add_class:"form-control"|attr:"placeholder:ФИО *" }}
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            {{ form.email.errors }}
+                                            {{ form.email|add_class:"form-control"|attr:"placeholder:Mail *" }}
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            {{ form.phone.errors }}
+                                            {{ form.phone|add_class:"form-control"|attr:"placeholder:Номер телефона *" }}
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            {{ form.subject.errors }}
+                                            {{ form.subject|add_class:"form-control"|attr:"placeholder:Тип услуги *" }}
+                                        </div>
+                                        <div class="col-md-12 form-group">
+                                            {{ form.message.errors }}
+                                            {{ form.message|add_class:"form-control"|attr:"placeholder:Напишите здесь ваше сообщение. Буду рада узнать подробности о вашем важном дне! *" }}
+                                        </div>
+                                        <div class="col-md-12">
+                                            <input type="submit" value="Отправить" class="btn btn-primary">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

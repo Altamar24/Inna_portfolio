@@ -1,0 +1,249 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+{% load static %}
+    <!-- Main -->
+    <div id="ckarla-main">
+    <!-- Banner -->
+    <div class="ready banner-padding bg-img" data-overlay-light="1" data-background="{% static 'images/1920x1080-no.jpg' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="cat text-center animate-box fadeInUp animated" data-animate-effect="fadeInUp"> <span>Проекты</span>
+                        <hr class="line line-hr-center">
+                        <h1>Портфолио и услуги</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div class="section-padding">
+        <div class="container">
+            <div class="row mb-30">
+                <div class="col-md-12"> <span>Проекты</span>
+                    <h2>Портфолио и услуги</h2>
+                    <hr class="line line-hr-left">
+                </div>
+                <div class="col-md-6">
+                    <p>Меня зовут Инна, в мир фотографии я попала ещё в 2015 году, когда я купила себе свой первый фотоаппарат. Сейчас это не просто хобби, а полноценная профессия.</p>
+                    <p>К каждой съемке я подхожу индивидуально, тем самым делая каждый проект не похожим на предыдущий.</p>
+                </div>
+            </div>
+            <!-- Portfolio gallery -->
+            <div class="karla-projects-gallery mb-90">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="karla-gallery-toolbar">
+                            <!-- Here you can change or add a new filter tab -->
+                            <li class="karla-toolbar-item active" data-filter="all"><a href="portfolio.html#">Все</a></li>
+                            <li class="karla-toolbar-item" data-filter="wedding"><a href="portfolio.html#">Свадебная</a></li>
+                            <li class="karla-toolbar-item" data-filter="prewedding"><a href="portfolio.html#">Предсвадебная</a></li>
+                            <li class="karla-toolbar-item" data-filter="portrait"><a href="portfolio.html#">Групповое</a></li>
+                        </ul>
+                        <ul class="karla-gallery-items" data-columns="3">
+                            <!-- Here you can change the gallery columns number to 2,3 or 4 -->
+                            <li class="karla-gallery-item prewedding">
+                                <!-- each item should have a class corresponding with the associated filter tab eg. development -->
+                                <a href="{% static 'images/full_hd/predsvadebnaya_1_full.jpg' %}"> <img src="{% static 'images/predsvadebnaya_1.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Предсвадебная</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="karla-gallery-item wedding">
+                                <a href="{% static 'images/full_hd/svadebnaya_1_full.jpg' %}"> <img src="{% static 'images/svadebnaya_1.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Свадебная</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="karla-gallery-item wedding">
+                                <a href="{% static 'images/full_hd/svadebnaya_2_full.jpg' %}"> <img src="{% static 'images/svadebnaya_2.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Свадебная</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="karla-gallery-item prewedding">
+                                <a href="{% static 'images/full_hd/predsvadebnaya_2_full.jpg' %}"> <img src="{% static 'images/predsvadebnaya_2.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Предсвадебная</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="karla-gallery-item wedding">
+                                <a href="{% static 'images/full_hd/svadebnaya_3_full.jpg' %}"> <img src="{% static 'images/svadebnaya_3.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Свадебная</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="karla-gallery-item portrait">
+                                <a href="{% static 'images/full_hd/gruppovoe_1_full.jpg' %}"> <img src="{% static 'images/gruppovoe_1.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Групповое</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="karla-gallery-item portrait">
+                                <a href="{% static 'images/full_hd/gruppovoe_2_full.jpg' %}"> <img src="{% static 'images/gruppovoe_2.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Групповое</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="karla-gallery-item portrait">
+                                <a href="{% static 'images/full_hd/gruppovoe_3_full.jpg' %}"> <img src="{% static 'images/gruppovoe_3.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Групповое</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="karla-gallery-item prewedding">
+                                <a href="{% static 'images/full_hd/predsvadebnaya_3_full.jpg' %}"> <img src="{% static 'images/predsvadebnaya_3.jpg' %}" alt="">
+                                    <div class="karla-project-imghover">
+                                        <div class="karla-item-caption">
+                                            <h4 class="karla-project-title">Предсвадебная</h4>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Video gallery -->
+            <div class="row">
+                <div class="col-md-12">
+                    <span>Портфолио</span>
+                    <h2>Видеогалерея</h2>
+                    <hr class="line line-hr-left">
+                </div>
+
+                <!-- Видео 1 -->
+                <div class="col-md-6 video-gallery">
+                    <div class="video-wrapper" tabindex="0" style="position: relative; width: 540px; height: 307px; cursor: pointer;">
+                        <img src="{% static 'images/video_1.jpg' %}" alt="Видео 1" width="540" height="307" />
+                        <div class="play-button" style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 64px;
+                            color: white;
+                            opacity: 0.8;
+                            pointer-events: none;
+                            user-select: none;
+                        ">▶</div>
+                    </div>
+                </div>
+
+                <!-- Видео 2 -->
+                <div class="col-md-6 video-gallery">
+                    <div class="video-wrapper" tabindex="0" style="position: relative; width: 540px; height: 307px; cursor: pointer;">
+                        <img src="{% static 'images/video_2.jpg' %}" alt="Видео 2" width="540" height="307" />
+                        <div class="play-button" style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 64px;
+                            color: white;
+                            opacity: 0.8;
+                            pointer-events: none;
+                            user-select: none;
+                        ">▶</div>
+                    </div>
+                </div>
+
+                <!-- Видео 3 -->
+                <div class="col-md-6 video-gallery">
+                    <div class="video-wrapper" tabindex="0" style="position: relative; width: 540px; height: 307px; cursor: pointer;">
+                        <img src="{% static 'images/video_3.jpg' %}" alt="Видео 3" width="540" height="307" />
+                        <div class="play-button" style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 64px;
+                            color: white;
+                            opacity: 0.8;
+                            pointer-events: none;
+                            user-select: none;
+                        ">▶</div>
+                    </div>
+                </div>
+
+                <!-- Видео 4 -->
+                <div class="col-md-6 video-gallery">
+                    <div class="video-wrapper" tabindex="0" style="position: relative; width: 540px; height: 307px; cursor: pointer;">
+                        <img src="{% static 'images/video_4.jpg' %}" alt="Видео 4" width="540" height="307" />
+                        <div class="play-button" style="
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            font-size: 64px;
+                            color: white;
+                            opacity: 0.8;
+                            pointer-events: none;
+                            user-select: none;
+                        ">▶</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+document.querySelectorAll('.video-wrapper').forEach(wrapper => {
+    wrapper.addEventListener('click', () => {
+        // Если видео уже вставлено — не делать ничего
+        if (wrapper.querySelector('video')) return;
+
+        // Получаем путь к превью
+        const img = wrapper.querySelector('img');
+        const src = img.src;
+
+        // Заменяем имя файла с .jpg на .mp4
+        const videoSrc = src.replace('.jpg', '.mp4');
+
+        // Создаём элемент video
+        const video = document.createElement('video');
+        video.width = 540;
+        video.height = 307;
+        video.controls = true;
+        video.autoplay = true;
+
+        const source = document.createElement('source');
+        source.src = videoSrc;
+        source.type = 'video/mp4';
+
+        video.appendChild(source);
+
+        // Очищаем содержимое wrapper и вставляем видео
+        wrapper.innerHTML = '';
+        wrapper.appendChild(video);
+
+        // Запускаем видео (на всякий случай)
+        video.play();
+    });
+});
+</script>
+    </div>
+    {% endblock %}
