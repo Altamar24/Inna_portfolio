@@ -403,6 +403,15 @@ input[type="checkbox"] {
     font-style: normal;
     text-align: center;
 }
+.karla-pageloading h2 {
+    font-family: 'Paris Script', cursive !important;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px; /* Можно подкорректировать размер */
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
 
 
 /* ======= Banner & Section ======= */
